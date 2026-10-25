@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Bharat Sutram Foundation</title>
+  <meta name="description" content="Get in touch with Bharat Sutram Foundation for donations, partnerships, volunteering, programme enquiries and collaboration.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Bharat Sutram Foundation Home">
+        <div class="nav__logo-icon" aria-hidden="true">BS</div>
+        <div class="nav__logo-text">Bharat Sutram<span>Foundation</span></div>
+      </a>
+      <div class="nav__links" id="nav-links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About Us</a>
+        <a href="programs.html" class="nav__link">Our Programs</a>
+        <a href="impact.html" class="nav__link">Our Impact</a>
+        <a href="donate.html" class="nav__link">Donate</a>
+        <a href="partner.html" class="nav__link">Partner</a>
+        <a href="transparency.html" class="nav__link">Transparency</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="donate.html" class="btn btn--primary btn--sm nav__cta">Support Us</a>
+      </div>
+      <button class="nav__mobile-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__content">
+        <div class="page-hero__label">Contact Us</div>
+        <h1 class="page-hero__title">Let's Start a Conversation That Can Lead to Action</h1>
+        <p class="page-hero__text">Whether you are interested in supporting a programme, exploring a partnership, volunteering your expertise or learning more about our work, we welcome your enquiry.</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- Contact Categories -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid--2" style="gap: var(--space-2xl); margin-bottom: var(--space-3xl);">
+          <div class="card animate-on-scroll">
+            <div class="card__icon">💝</div>
+            <h4 class="card__title">Donors &amp; Philanthropic Partners</h4>
+            <p class="card__text">Contact us to discuss programme support, charitable contributions, project proposals or opportunities for longer-term collaboration.</p>
+          </div>
+          <div class="card animate-on-scroll animate-delay-1">
+            <div class="card__icon">🏢</div>
+            <h4 class="card__title">CSR &amp; Institutional Partners</h4>
+            <p class="card__text">We welcome enquiries from organisations interested in exploring suitable community development projects, subject to eligibility and programme capacity.</p>
+          </div>
+          <div class="card animate-on-scroll">
+            <div class="card__icon">🤝</div>
+            <h4 class="card__title">Volunteers &amp; Trainers</h4>
+            <p class="card__text">Share your skills, experience and interests so that we can consider appropriate opportunities based on current or planned activities.</p>
+          </div>
+          <div class="card animate-on-scroll animate-delay-1">
+            <div class="card__icon">🏘️</div>
+            <h4 class="card__title">Community &amp; Programme Enquiries</h4>
+            <p class="card__text">Contact us for information about programme availability, proposed activities, eligibility criteria and collaboration with local institutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form + Info -->
+    <section class="section section--ivory-warm">
+      <div class="container">
+        <div class="feature-row" style="gap: var(--space-3xl);">
+          <!-- Form -->
+          <div class="animate-on-scroll">
+            <div class="section-label">Send Us an Enquiry</div>
+            <h2 class="mb-lg">Get in Touch</h2>
+            <form data-validate id="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name *</label>
+                <input type="text" id="contact-name" name="name" class="form-input" required placeholder="Your full name">
+                <p class="form-error">Please enter your name.</p>
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" name="email" class="form-input" required placeholder="your@email.com">
+                <p class="form-error">Please enter a valid email address.</p>
+              </div>
+              <div class="form-group">
+                <label for="contact-org" class="form-label">Organisation (if applicable)</label>
+                <input type="text" id="contact-org" name="organisation" class="form-input" placeholder="Your organisation name">
+              </div>
+              <div class="form-group">
+                <label for="contact-purpose" class="form-label">Purpose of Enquiry *</label>
+                <select id="contact-purpose" name="purpose" class="form-select" required>
+                  <option value="">Select a purpose</option>
+                  <option value="donation">Donation / Financial Support</option>
+                  <option value="csr">CSR Partnership</option>
+                  <option value="institutional">Institutional Collaboration</option>
+                  <option value="volunteer">Volunteering</option>
+                  <option value="programme">Programme Information</option>
+                  <option value="media">Media / Communications</option>
+                  <option value="general">General Enquiry</option>
+                </select>
+                <p class="form-error">Please select the purpose of your enquiry.</p>
+              </div>
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message *</label>
+                <textarea id="contact-message" name="message" class="form-textarea" required placeholder="Please include relevant details about your enquiry, preferred contact method and any specific programme or collaboration interests..."></textarea>
+                <p class="form-error">Please enter your message.</p>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Send Enquiry</button>
+              <div class="form-success" style="display: none; margin-top: var(--space-lg); padding: var(--space-lg); background: var(--sage-pale); border-radius: var(--radius-md); text-align: center; color: var(--forest);">
+                <strong>Thank you for your enquiry!</strong><br>We aim to respond within a reasonable timeframe, subject to availability.
+              </div>
+              <p class="form-hint" style="margin-top: var(--space-md); text-align: center;">We aim to respond to enquiries within a reasonable timeframe, subject to availability.</p>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="animate-on-scroll animate-delay-2">
+            <div style="padding: var(--space-2xl); background: var(--forest); border-radius: var(--radius-lg); color: var(--text-on-dark); margin-bottom: var(--space-xl);">
+              <h3 style="color: var(--ivory); margin-bottom: var(--space-xl);">Contact Details</h3>
+              
+              <div style="margin-bottom: var(--space-xl);">
+                <h4 style="color: var(--gold-light); font-family: var(--font-body); font-size: var(--fs-small); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: var(--space-sm);">Organisation</h4>
+                <p style="color: rgba(247,245,238,0.9);">Bharat Sutram Foundation</p>
+              </div>
+
+              <div style="margin-bottom: var(--space-xl);">
+                <h4 style="color: var(--gold-light); font-family: var(--font-body); font-size: var(--fs-small); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: var(--space-sm);">Email</h4>
+                <p style="color: rgba(247,245,238,0.7); font-style: italic; font-size: var(--fs-small);">Official email will be published once confirmed.</p>
+              </div>
+
+              <div style="margin-bottom: var(--space-xl);">
+                <h4 style="color: var(--gold-light); font-family: var(--font-body); font-size: var(--fs-small); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: var(--space-sm);">Phone</h4>
+                <p style="color: rgba(247,245,238,0.7); font-style: italic; font-size: var(--fs-small);">Official phone number will be published once confirmed.</p>
+              </div>
+
+              <div style="margin-bottom: var(--space-xl);">
+                <h4 style="color: var(--gold-light); font-family: var(--font-body); font-size: var(--fs-small); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: var(--space-sm);">Registered Office</h4>
+                <p style="color: rgba(247,245,238,0.7); font-style: italic; font-size: var(--fs-small);">Registered address will be published once confirmed.</p>
+              </div>
+
+              <div>
+                <h4 style="color: var(--gold-light); font-family: var(--font-body); font-size: var(--fs-small); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: var(--space-sm);">Location</h4>
+                <p style="color: rgba(247,245,238,0.7); font-style: italic; font-size: var(--fs-small);">India</p>
+              </div>
+            </div>
+
+            <div style="padding: var(--space-xl); background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-light);">
+              <h4 class="mb-md" style="color: var(--navy);">Quick Links</h4>
+              <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+                <a href="donate.html" style="color: var(--navy); font-weight: 500;">→ Make a Donation</a>
+                <a href="partner.html" style="color: var(--navy); font-weight: 500;">→ Explore Partnership Opportunities</a>
+                <a href="volunteer.html" style="color: var(--navy); font-weight: 500;">→ Volunteer With Us</a>
+                <a href="programs.html" style="color: var(--navy); font-weight: 500;">→ View Our Programmes</a>
+                <a href="transparency.html" style="color: var(--navy); font-weight: 500;">→ Transparency &amp; Governance</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="section text-center">
+      <div class="container container--narrow">
+        <h2 class="mb-lg animate-on-scroll">Together, We Can Work Towards a More Inclusive Future</h2>
+        <div class="divider divider--center"></div>
+        <p class="mt-xl animate-on-scroll animate-delay-1" style="font-family: var(--font-heading); font-size: var(--fs-h4); font-style: italic; color: var(--forest);">Education. Skills. Dignity. Well-being.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo"><div class="footer__logo-icon" aria-hidden="true">BS</div><div class="footer__logo-text">Bharat Sutram Foundation</div></a>
+          <p class="footer__description">Connecting people with knowledge, skills and opportunities to build a more inclusive future.</p>
+          <p class="footer__tagline">Education. Skills. Dignity. Well-being.</p>
+        </div>
+        <div><h3 class="footer__heading">Explore</h3><div class="footer__links"><a href="index.html" class="footer__link">Home</a><a href="about.html" class="footer__link">About Us</a><a href="programs.html" class="footer__link">Our Programs</a><a href="impact.html" class="footer__link">Our Impact</a><a href="donate.html" class="footer__link">Donate</a><a href="partner.html" class="footer__link">Partner With Us</a><a href="volunteer.html" class="footer__link">Volunteer</a><a href="contact.html" class="footer__link">Contact</a></div></div>
+        <div><h3 class="footer__heading">Focus Areas</h3><div class="footer__links"><a href="programs.html#skills" class="footer__link">Skill Development</a><a href="programs.html#girls" class="footer__link">Girls' Empowerment</a><a href="programs.html#children" class="footer__link">Education</a><a href="programs.html#health" class="footer__link">Community Health</a><a href="programs.html#seniors" class="footer__link">Senior Citizen Welfare</a></div></div>
+        <div><h3 class="footer__heading">Transparency</h3><div class="footer__links"><a href="transparency.html" class="footer__link">Governance</a><a href="transparency.html#reports" class="footer__link">Reports</a><a href="transparency.html#policies" class="footer__link">Policies</a></div></div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Bharat Sutram Foundation. All rights reserved.</p>
+        <p class="footer__legal">Bharat Sutram Foundation operates in accordance with its applicable governing documents and legal requirements.</p>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
