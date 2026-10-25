@@ -131,15 +131,50 @@ function initFormValidation() {
       });
 
       if (isValid) {
-        // Show success message
-        const successMsg = form.querySelector('.form-success');
-        if (successMsg) {
-          successMsg.style.display = 'block';
-          form.reset();
-          setTimeout(() => {
-            successMsg.style.display = 'none';
-          }, 5000);
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn ? submitBtn.textContent : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
         }
+
+        const action = form.getAttribute('action') || 'https://formsubmit.co/ayushprakash1010@gmail.com';
+        const ajaxUrl = action.includes('/ajax/') ? action : action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+        const formData = new FormData(form);
+
+        fetch(ajaxUrl, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          const successMsg = form.querySelector('.form-success');
+          if (successMsg) {
+            if (data.success === 'true' || data.success === true) {
+              successMsg.innerHTML = '<strong>Thank you for your enquiry!</strong><br>Your message has been received. We aim to respond within a reasonable timeframe.';
+            } else {
+              successMsg.innerHTML = '<strong>' + (data.message || 'Thank you! Your message was submitted successfully.') + '</strong>';
+            }
+            successMsg.style.display = 'block';
+            form.reset();
+            setTimeout(() => {
+              successMsg.style.display = 'none';
+            }, 8000);
+          }
+        })
+        .catch(() => {
+          // Fallback to normal form submit if fetch fails
+          form.submit();
+        })
+        .finally(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+          }
+        });
       }
     });
 
