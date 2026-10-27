@@ -581,15 +581,16 @@ h4 { font-size: var(--fs-h4); }
 .nav__links {
   display: flex;
   align-items: center;
-  gap: var(--space-xl);
+  gap: clamp(0.5rem, 1.1vw, 1.25rem);
 }
 
 .nav__link {
-  font-size: var(--fs-small);
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-secondary);
   text-decoration: none;
   padding: var(--space-xs) 0;
+  white-space: nowrap;
   position: relative;
   transition: color var(--duration-fast) var(--ease-out);
 }
