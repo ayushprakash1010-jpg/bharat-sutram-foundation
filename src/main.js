@@ -138,7 +138,7 @@ function initFormValidation() {
           submitBtn.textContent = 'Sending...';
         }
 
-        const action = form.getAttribute('action') || 'https://formsubmit.co/ayushprakash1010@gmail.com';
+        const action = form.getAttribute('action') || 'https://formsubmit.co/contact.bharatsutram@gmail.com';
         const ajaxUrl = action.includes('/ajax/') ? action : action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
         const formData = new FormData(form);
 

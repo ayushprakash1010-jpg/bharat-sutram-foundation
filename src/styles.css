@@ -526,6 +526,26 @@ h4 { font-size: var(--fs-h4); }
   color: var(--forest);
 }
 
+.nav__logo-img {
+  height: 52px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.nav__logo-img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .nav__logo-img {
+    height: 42px;
+    max-width: 200px;
+  }
+}
+
 .nav__logo-icon {
   width: 42px;
   height: 42px;
@@ -1022,6 +1042,14 @@ h4 { font-size: var(--fs-h4); }
   margin-bottom: var(--space-lg);
   color: var(--ivory);
   text-decoration: none;
+}
+
+.footer__logo-img {
+  height: 52px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  display: block;
 }
 
 .footer__logo-icon {
