@@ -524,6 +524,8 @@ h4 { font-size: var(--fs-h4); }
   gap: var(--space-sm);
   text-decoration: none;
   color: var(--forest);
+  margin-right: var(--space-xl);
+  flex-shrink: 0;
 }
 
 .nav__logo-img {
