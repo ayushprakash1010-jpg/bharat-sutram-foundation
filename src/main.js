@@ -66,12 +66,29 @@ function initScrollAnimations() {
       });
     },
     {
-      threshold: 0.1,
-      rootMargin: '0px 0px -60px 0px',
+      threshold: 0.05,
+      rootMargin: '50px 0px 50px 0px',
     }
   );
 
-  elements.forEach(el => observer.observe(el));
+  elements.forEach(el => {
+    // If element is already in viewport on load, reveal immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    } else {
+      observer.observe(el);
+    }
+  });
+
+  // Handle hash navigation so anchor targets are always visible immediately
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      target.classList.add('visible');
+      target.querySelectorAll('.animate-on-scroll').forEach(child => child.classList.add('visible'));
+    }
+  }
 }
 
 // ---------- Accordion ----------
