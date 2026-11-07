@@ -16,6 +16,7 @@ export default defineConfig({
         volunteer: resolve(root, 'volunteer.html'),
         transparency: resolve(root, 'transparency.html'),
         contact: resolve(root, 'contact.html'),
+        notfound: resolve(root, '404.html'),
       },
     },
   },
